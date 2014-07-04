@@ -1,0 +1,25 @@
+include ./common/component
+
+extends layout/default.jade
+
+block head  
+  title index
+  +css("./css/index.css")
+
+block content
+  .banner-area
+  .category-area
+    .category.bg-brand 品牌
+    .category.bg-lunch 午市
+    .category.bg-promo 大促
+    .category.bg-card 卡惠
+  .hot-area
+    .head 最热优惠
+    .info-list
+      each type in ['card','lunch','lunch','brand','card','lunch','lunch','brand']
+        +info(type)
+
+  +js("./js/index.js")
+
+
+
