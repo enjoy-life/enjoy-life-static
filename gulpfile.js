@@ -39,8 +39,6 @@ gulp.task('img', function() {
     .pipe(gulp.dest('./build/img'));
 });
 
-
-
 gulp.task('watch', function() {
   gulp.watch(['./dev/views/**/*.jade'], ['jade']);
   gulp.watch(['./dev/css/**/*.styl'], ['stylus']);
@@ -48,6 +46,6 @@ gulp.task('watch', function() {
 });
 
 
-gulp.task('default', ['stylus', 'img', 'jade', 'browserify', 'watch']);
+gulp.task('default', ['stylus', 'img', 'jade','browserify', 'watch']);
 
 gulp.task('build', ['stylus', 'img', 'jade','browserify']);

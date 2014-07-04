@@ -8,6 +8,7 @@ block head
 
 block content
   .banner-area
+    .banner
   .category-area
     .category.bg-brand 品牌
     .category.bg-lunch 午市
@@ -18,7 +19,6 @@ block content
     .info-list
       each type in ['card','lunch','lunch','brand','card','lunch','lunch','brand']
         +info(type)
-
   +js("./js/index.js")
 
 
