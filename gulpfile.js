@@ -33,6 +33,11 @@ gulp.task('browserify', function() {
     .pipe(gulp.dest('./build/js'));
 });
 
+gulp.task('cortex', function() {
+  return gulp.src(["./dev/js/neurons/**/*"])
+    .pipe(gulp.dest('./build/js/neurons/'));
+});
+
 
 gulp.task('img', function() {
   return gulp.src(['./dev/img/*'])
@@ -42,7 +47,8 @@ gulp.task('img', function() {
 gulp.task('watch', function() {
   gulp.watch(['./dev/views/**/*.jade'], ['jade']);
   gulp.watch(['./dev/css/**/*.styl'], ['stylus']);
-  gulp.watch(['./dev/js/*.js'], ['browserify']);
+  //gulp.watch(['./dev/js/neurons/**/*.js'], ['cortex']);
+   gulp.watch(['./dev/js/*.js'], ['browserify']);
 });
 
 
