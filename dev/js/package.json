@@ -1,0 +1,19 @@
+{
+  "name": "huixiang",
+  "version": "0.1.0",
+  "description": "The coolest cortex module.",
+  "main": "index.js",
+  "repository": "git://git.oschina.net/ltebean/coupon-static.git",
+  "keywords": [
+    "huixiang"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "ltebean",
+    "email": "yucong1118@gmail.com"
+  },
+  "bugs": {
+    "url": "http://git.oschina.net/ltebean/coupon-static/issues"
+  },
+  "homepage": "http://git.oschina.net/ltebean/coupon-static"
+}
