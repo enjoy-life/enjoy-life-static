@@ -4,13 +4,6 @@ html(ng-app="app")
   head
     meta(charset="UTF-8")
     block head
-    +js("./js/neurons/neuron.js")
-    script.
-      neuron.config({
-        path: './js/neurons'
-      });
-    +js("./js/neurons/config.js")
-
   body(ng-controller="Controller")
     block content
 

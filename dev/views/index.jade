@@ -1,4 +1,4 @@
-include ./common/static
+include ./common/component
 
 extends layout/default.jade
 
@@ -7,13 +7,27 @@ block head
   +css("./css/index.css")
 
 block content
-  .pieces
-  script.
-    facade({
-      entry:"huixiang-static/entries/pieces.js"
-    })
-    
-  
+  .banner-area
+    .banner
+  .category-area
+    .category.bg-brand
+      img.icon(src="./img/icon-brand.png")
+      .title 品牌优惠
+    .category.bg-lunch 
+      img.icon(src="./img/icon-lunch.png")
+      .title 午市套餐
+    .category.bg-promo
+      img.icon(src="./img/icon-promo.png")
+      .title 电商大促
+    .category.bg-card
+      img.icon(src="./img/icon-card.png")
+      .title 信用卡惠
+  .hot-area
+    .head 最热优惠
+    .info-list
+      each type in ['lunch','lunch','lunch','brand','card','lunch','lunch','brand']
+        +info(type)
+  +js("./js/index.js")
 
 
 

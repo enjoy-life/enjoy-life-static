@@ -25,6 +25,13 @@ gulp.task('jade', function() {
     .pipe(gulp.dest('./build/'));
 });
 
+gulp.task('browserify', function() {
+  return gulp.src(["./dev/js/*.js"])
+    .pipe(browserify({
+      debug: true
+    }))
+    .pipe(gulp.dest('./build/js'));
+});
 
 gulp.task('cortex', function() {
   return gulp.src(["./dev/js/neurons/**/*"])
@@ -40,10 +47,11 @@ gulp.task('img', function() {
 gulp.task('watch', function() {
   gulp.watch(['./dev/views/**/*.jade'], ['jade']);
   gulp.watch(['./dev/css/**/*.styl'], ['stylus']);
-  gulp.watch(['./dev/js/neurons/**/*.js'], ['cortex']);
+  //gulp.watch(['./dev/js/neurons/**/*.js'], ['cortex']);
+   gulp.watch(['./dev/js/*.js'], ['browserify']);
 });
 
 
-gulp.task('default', ['stylus', 'img', 'jade','cortex', 'watch']);
+gulp.task('default', ['stylus', 'img', 'jade','browserify', 'watch']);
 
-gulp.task('build', ['stylus', 'img', 'jade','cortex']);
+gulp.task('build', ['stylus', 'img', 'jade','browserify']);
