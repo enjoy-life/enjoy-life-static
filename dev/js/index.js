@@ -1,10 +1,11 @@
 var seaport = require('seaport-bridge');
 $ = require('zepto-browserify').$
 var fastclick = require('fastclick');
+var slider=require('simple-slider');
+
+var bannerSlider = new slider($('.banner-area')[0]);
 
 fastclick(document.body);
-
-var domain = '223.4.15.141';
 
 seaport.connect(function dataHandler(data) {
 
