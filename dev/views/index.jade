@@ -7,28 +7,29 @@ block head
   +css("./css/index.css")
 
 block content
-  .banner-area#banner-area
-    img.banner(src="http://placekitten.com/g/612/612")
-    img.banner(src="http://placekitten.com/g/612/613")
-    img.banner(src="http://placekitten.com/g/612/614")
-  .category-area
-    .category.bg-brand
-      img.icon(src="./img/icon-brand.png")
-      .title 品牌优惠
-    .category.bg-lunch 
-      img.icon(src="./img/icon-lunch.png")
-      .title 午市套餐
-    .category.bg-promo
-      img.icon(src="./img/icon-promo.png")
-      .title 电商大促
-    .category.bg-card
-      img.icon(src="./img/icon-card.png")
-      .title 信用卡惠
-  .hot-area
-    .head 最热优惠
-    .info-list
-      each type in ['lunch','lunch','lunch','brand','card','lunch','lunch','brand']
-        +info(type)
+  .wrapper
+    .banner-area#banner-area
+      img.banner(src="http://placekitten.com/g/612/612")
+      img.banner(src="http://placekitten.com/g/612/613")
+      img.banner(src="http://placekitten.com/g/612/614")
+    .category-area
+      .category.bg-brand
+        img.icon(src="./img/icon-brand.png")
+        .title 品牌优惠
+      .category.bg-lunch 
+        img.icon(src="./img/icon-lunch.png")
+        .title 午市套餐
+      .category.bg-promo
+        img.icon(src="./img/icon-promo.png")
+        .title 电商大促
+      .category.bg-card
+        img.icon(src="./img/icon-card.png")
+        .title 信用卡惠
+    .hot-area
+      .head 最热优惠
+      .info-list
+        each type in ['lunch','lunch','lunch','brand','card','lunch','lunch','brand']
+          +info(type)
   +js("./js/index.js")
 
 

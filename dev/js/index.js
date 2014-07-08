@@ -3,10 +3,11 @@ $ = require('zepto-browserify').$
 var fastclick = require('fastclick');
 var slider = require('simple-slider');
 var Spinner = require('spin.js');
-
+var IScroll = require('iscroll');
 var bannerSlider = new slider($('.banner-area')[0]);
 
 fastclick(document.body);
+new IScroll(document.body);
 
 
 var spinner = new Spinner({
